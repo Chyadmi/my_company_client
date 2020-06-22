@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MyCompany_V3.jnlp">
+  <information>
+    <title>MyCompany_V3</title>
+    <vendor>hamza</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MyCompany_V3.jar" size="1829846" download="eager" />
+    <jar href="lib\commons-validator-1.6-javadoc.jar" size="517366" download="eager" />
+    <jar href="lib\commons-validator-1.6-sources.jar" size="234514" download="eager" />
+    <jar href="lib\commons-validator-1.6-test-sources.jar" size="189564" download="eager" />
+    <jar href="lib\commons-validator-1.6-tests.jar" size="227788" download="eager" />
+    <jar href="lib\commons-validator-1.6.jar" size="186077" download="eager" />
+    <jar href="lib\ojdbc7.jar" size="3397734" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MyCompany_V3" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="mycompany_v1.pkg1.ViewLauncher"  name="MyCompany_V3" />
+  <update check="always"/>
+</jnlp>
