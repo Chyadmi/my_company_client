@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="600.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mycompany_v1.pkg1.LoginFXMLController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" />
+      <ImageView fitHeight="600.0" fitWidth="330.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/night-sunset-gradation-blur-wallpaper-hd-iphone-wallpapers-in-blur-wallpapers-750_1334.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="177.0" fitWidth="167.0" layoutX="82.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/115783931601b5c.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="login" layoutX="62.0" layoutY="282.0" prefHeight="35.0" prefWidth="208.0" promptText="Idantifiant" style="-fx-background-radius: 10; -fx-border-color: #59c8ff; -fx-border-radius: 10; -fx-border-width: 2;" />
+      <PasswordField fx:id="password" layoutX="61.0" layoutY="345.0" prefHeight="35.0" prefWidth="208.0" promptText="Mot de passe" style="-fx-background-radius: 10; -fx-border-color: #59c8ff; -fx-border-radius: 10; -fx-border-width: 2;" />
+      <Button fx:id="loginButton" defaultButton="true" layoutX="61.0" layoutY="408.0" mnemonicParsing="false" onAction="#connect" prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: #2c4f70; -fx-border-color: #59c8ff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-insets: -2;" text="Se connecter" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label layoutX="62.0" layoutY="262.0" text="Identifiant" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="326.0" text="Mot de passe" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <Label id="close" fx:id="close" layoutX="302.0" layoutY="8.0" onMouseClicked="#closeApp" text="X" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="262.0" layoutY="-2.0" text="-" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="42.0" />
+         </font>
+      </Label>
+      <Button fx:id="minimize" layoutX="255.0" layoutY="9.0" mnemonicParsing="false" onAction="#minimizeApp" opacity="0.01" prefHeight="3.0" prefWidth="28.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label fx:id="ip" layoutX="129.0" layoutY="493.0" text="192.168.1.107" textAlignment="CENTER" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="472.0" text="L'adresse IP du serveur :" textAlignment="CENTER" textFill="WHITE" />
+      <Label layoutX="143.0" layoutY="512.0" text="Changer" textAlignment="CENTER" textFill="WHITE" underline="true" />
+      <Button layoutX="139.0" layoutY="508.0" mnemonicParsing="false" onAction="#change_ip" opacity="0.001" prefHeight="26.0" prefWidth="52.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="adr_ok" layoutX="97.0" layoutY="534.0" text="Le serveur est atteignable" textAlignment="CENTER" textFill="#09c363" />
+      <Label fx:id="adr_null" layoutX="79.0" layoutY="533.0" text="Le serveur n'est pas atteignable !" textAlignment="CENTER" textFill="RED" />
+   </children>
+</AnchorPane>

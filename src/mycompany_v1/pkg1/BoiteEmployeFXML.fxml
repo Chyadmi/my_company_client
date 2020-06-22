@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mycompany_v1.pkg1.BoiteEmployeFXMLController">
+   <children>
+      <ImageView fitHeight="636.0" fitWidth="869.0" layoutX="221.0" layoutY="45.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/bg_white.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="MRtable" layoutX="259.0" layoutY="116.0" onMouseClicked="#mouseClickedTable1" prefHeight="180.0" prefWidth="394.0" />
+      <Label layoutX="313.0" layoutY="77.0" text="Boîte de réception ">
+         <font>
+            <Font name="Agency FB" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="731.0" layoutY="75.0" text="Messages Envoyés">
+         <font>
+            <Font name="Agency FB" size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="MEtable" layoutX="681.0" layoutY="114.0" onMouseClicked="#mouseClickedTable2" prefHeight="183.0" prefWidth="397.0" />
+      <Pane layoutX="368.0" layoutY="317.0" opacity="0.4" prefHeight="322.0" prefWidth="579.0" style="-fx-background-color: #8c8c8c; -fx-background-radius: 18;">
+         <children>
+            <Label fx:id="idMessage" layoutX="403.0" layoutY="300.0" opacity="0.0" text="id" />
+            <Label fx:id="typeMessage" layoutX="550.0" layoutY="297.0" opacity="0.0" text="id" />
+         </children>
+      </Pane>
+      <Button fx:id="supprimerMessage" layoutX="794.0" layoutY="624.0" mnemonicParsing="false" onAction="#deleteMessage" prefHeight="33.0" prefWidth="123.0" style="-fx-background-color: #c11313; -fx-background-radius: 12;" text="Supprimer " textFill="WHITE" />
+      <AnchorPane prefHeight="682.0" prefWidth="220.0" style="-fx-background-color: #260033;">
+         <children>
+            <Pane prefHeight="63.0" prefWidth="200.0" style="-fx-background-color: #260033;" />
+            <ImageView fitHeight="683.0" fitWidth="241.0" layoutY="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/night-sunset-gradation-blur-wallpaper-hd-iphone-wallpapers-in-blur-wallpapers-750_1334.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutY="172.0" opacity="0.51" prefHeight="47.0" prefWidth="241.0" style="-fx-background-color: #777777;" />
+            <Label layoutX="42.0" layoutY="125.0" prefHeight="31.0" prefWidth="122.0" text="Mes demandes" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="180.0" prefHeight="31.0" prefWidth="178.0" text="Boite de reception" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB" size="25.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="63.0" prefWidth="241.0" style="-fx-background-color: #2c4f70;">
+               <children>
+                  <Label layoutX="67.0" layoutY="16.0" prefHeight="32.0" prefWidth="108.0" text="MON ESPACE" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="122.0" fitWidth="185.0" layoutX="60.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/115783931601b5c.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="42.0" layoutY="232.0" prefHeight="27.0" prefWidth="167.0" text="Se deconnecter" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="76.0" prefHeight="31.0" prefWidth="83.0" text="Accueil" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="demandesButton" layoutY="117.0" mnemonicParsing="false" onAction="#toMesDemandes" opacity="0.001" prefHeight="47.0" prefWidth="241.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="inboxButton" layoutX="9.0" layoutY="172.0" mnemonicParsing="false" onAction="#toBoiteReception" opacity="0.001" prefHeight="47.0" prefWidth="223.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="profileButton" layoutY="68.0" mnemonicParsing="false" onAction="#toProfile" opacity="0.001" prefHeight="47.0" prefWidth="241.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="seDeconnecterButton" layoutX="1.0" layoutY="219.0" mnemonicParsing="false" onAction="#seDeconnecter" opacity="0.001" prefHeight="47.0" prefWidth="234.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="243.0" prefHeight="63.0" prefWidth="846.0" style="-fx-background-color: #d9d9d9;">
+         <children>
+            <Label layoutX="32.0" layoutY="11.0" prefHeight="18.0" prefWidth="139.0" text="Bienvenue" textFill="#2c4f70">
+               <font>
+                  <Font name="Agency FB" size="34.0" />
+               </font>
+            </Label>
+            <Label fx:id="fullname" layoutX="153.0" layoutY="11.0" prefHeight="35.0" prefWidth="453.0" text="NOM Prenom" textFill="#2c4f70">
+               <font>
+                  <Font name="Agency FB" size="34.0" />
+               </font>
+            </Label>
+            <Label layoutX="778.0" layoutY="1.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Button fx:id="minimize" layoutX="772.0" layoutY="12.0" mnemonicParsing="false" onAction="#minimizeApp" opacity="0.01" prefHeight="3.0" prefWidth="28.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label id="close" fx:id="close" layoutX="824.0" layoutY="12.0" onDragDetected="#closeApp" onMouseClicked="#closeApp" text="X">
+               <font>
+                  <Font name="Berlin Sans FB" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="260.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/3880288_thumb.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="47.0" layoutX="682.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/send-mail-69-667875.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1040.0" layoutY="91.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="49.0" style="-fx-background-color: #2c4f70; -fx-border-color: #59c8ff; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-width: 2; -fx-border-insets: -2;" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="1055.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Button layoutX="1039.0" layoutY="92.0" mnemonicParsing="false" onAction="#envoyerMessage" opacity="1.0E-4" prefHeight="47.0" prefWidth="52.0" />
+      <Label layoutX="412.0" layoutY="327.0" text="De :" />
+      <Text fx:id="sender" layoutX="443.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="241.00001323223114">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label layoutX="417.0" layoutY="346.0" text="A :" />
+      <Text fx:id="reciever" layoutX="443.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="241.00001323223114">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label layoutX="400.0" layoutY="365.0" text="Date :" />
+      <Text fx:id="date" layoutX="443.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="241.00001323223114">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label layoutX="395.0" layoutY="385.0" text="Objet :" />
+      <Text fx:id="objet" layoutX="443.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="241.00001323223114">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label layoutX="379.0" layoutY="411.0" text="Message :" />
+      <Line endX="384.0" layoutX="543.0" layoutY="421.0" startX="-100.0" />
+      <Line endX="384.0" layoutX="540.0" layoutY="582.0" startX="-157.0" />
+      <Text fx:id="message" layoutX="396.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="533.83330479078">
+         <font>
+            <Font name="Calibri Italic" size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
